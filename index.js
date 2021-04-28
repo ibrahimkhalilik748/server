@@ -36,11 +36,16 @@ client.connect(err => {
         res.send(result.insertedCount > 0)
       })
   })
-  app.get('logIn', (req, res) => {
+  app.get('/logIn', (req, res) => {
     userCollection.find({}).toArray((err, result) => {
       res.send(result)
     })
   })
+  // app.get('/admin', (req, res) => {
+  //   AdminCollection.find({}).toArray((err, result) => {
+  //     res.send(result)
+  //   })
+  // })
 
 
   // client.close();
